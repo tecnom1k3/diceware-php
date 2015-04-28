@@ -28,6 +28,8 @@ class Diceware
      * Sets the http client
      * 
      * @param Client $client
+     * 
+     * @codeCoverageIgnore
      */
     public function setHttpClient(Client $client)
     {
@@ -38,6 +40,8 @@ class Diceware
      * Gets the http client
      * 
      * @return Client
+     * 
+     * @codeCoverageIgnore
      */
     public function getHttpClient()
     {
@@ -48,6 +52,8 @@ class Diceware
      * Create a new command instance.
      *
      * @return void
+     * 
+     * @codeCoverageIgnore
     */
     public function __construct(Factory $fsFactory, Client $guzzleClient)
     {
@@ -59,6 +65,8 @@ class Diceware
      * Sets the filesystem factory
      * 
      * @param Factory $factory
+     * 
+     * @codeCoverageIgnore
     */
     public function setFsFactory(Factory $factory)
     {
@@ -69,6 +77,8 @@ class Diceware
      * Gets the filesystem factory
      * 
      * @return Factory
+     * 
+     * @codeCoverageIgnore
     */
     public function getFsFactory()
     {
