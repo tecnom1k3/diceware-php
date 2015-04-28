@@ -49,4 +49,14 @@ class FeatureContext implements Context, SnippetAcceptingContext
             );
         }
     }
+    
+    /**
+     * @Then file should exists :arg1
+     */
+    public function fileShouldExists($arg1)
+    {
+        if (!is_file($arg1)) {
+            throw new Exception('File ' . $arg1 . ' does not exist');
+        }
+    }
 }

@@ -3,7 +3,12 @@ php:
   - 5.4
   - 5.5
   - 5.6
-install: composer install --dev
+install:
+  - composer self-update
+  - composer install --dev
 before_script:
   - sh ./build/ci/createEnvFile.sh 
-script: phpunit
+  - chmod +x ./vendor/bin/behat
+script:
+  - phpunit
+  - ./vendor/bin/behat

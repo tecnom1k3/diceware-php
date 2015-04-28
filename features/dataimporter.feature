@@ -10,3 +10,4 @@ Scenario: Download diceware word list
     Getting diceware data
     Retrieved data
     """
+  And file should exists "storage/app/diceware.wordlist.asc"
