@@ -20,4 +20,33 @@ class FeatureContext implements Context, SnippetAcceptingContext
     public function __construct()
     {
     }
+    
+    /**
+     * @Given I am in the root directory
+     */
+    public function iAmInTheRootDirectory()
+    {
+        chdir(dirname(__DIR__) . '/../');
+    }
+
+    /**
+     * @When I run :arg1
+     */
+    public function iRun($arg1)
+    {
+        exec($arg1, $output);
+        $this->output = trim(implode("\n", $output));
+    }
+
+    /**
+     * @Then I should get:
+     */
+    public function iShouldGet(PyStringNode $string)
+    {
+        if ((string) $string !== $this->output) {
+            throw new Exception(
+                "Actual output is:\n" . $this->output
+            );
+        }
+    }
 }

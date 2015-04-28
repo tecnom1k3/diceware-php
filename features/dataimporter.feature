@@ -4,7 +4,7 @@ Feature: dataimporter
   I need to be able to downlad the diceware word list from the site.
 Scenario: Download diceware word list
   Given I am in the root directory
-  When I run "php artisan util:importData"
+  When I run "php artisan util:importData  --no-ansi"
   Then I should get:
     """
     Getting diceware data
