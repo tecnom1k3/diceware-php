@@ -5,5 +5,5 @@ php:
   - 5.6
 install: composer install --dev
 before_script:
-  - ./build/ci/createEnvFile.sh 
+  - sh ./build/ci/createEnvFile.sh 
 script: phpunit
