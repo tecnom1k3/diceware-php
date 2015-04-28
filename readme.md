@@ -1,6 +1,6 @@
 ## Diceware
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
+[![Build Status](https://travis-ci.org/tecnom1k3/diceware.svg)](https://travis-ci.org/tecnom1k3/diceware)
 
 #Install
 enable `Dotenv::load(__DIR__.'/../');` in `app/boostrap.php` file
