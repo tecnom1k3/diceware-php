@@ -1,4 +1,7 @@
 /bootstrap/compiled.php
 .env.*.php
 .env.php
+.c9/
+vendor/
+composer.lock
 .env
