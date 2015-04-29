@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/tecnom1k3/diceware.svg?branch=features%2Fdevelop)](https://travis-ci.org/tecnom1k3/diceware)
 [![Coverage Status](https://coveralls.io/repos/tecnom1k3/diceware/badge.svg)](https://coveralls.io/r/tecnom1k3/diceware)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tecnom1k3/diceware/badges/quality-score.png?b=features%2Fdevelop)](https://scrutinizer-ci.com/g/tecnom1k3/diceware/?branch=features%2Fdevelop)
 
 #Install
 - Create an `.env` file in root directory, use `.env.example` as a boilerplate.  in the file make sure you have the key `DB_CONNECTION=sqlite` and `DB_DATABASE=storage/app/database.sqlite`.
