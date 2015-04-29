@@ -5,12 +5,13 @@ php:
   - 5.6
 install:
   - composer self-update
-  - composer install --dev
+  - composer install
 before_script:
   - sh ./build/ci/createEnvFile.sh
   - sh ./build/ci/createSqliteFile.sh
   - chmod +x ./vendor/bin/behat
+  - chmod +x ./vendor/bin/phpunit
   - php artisan migrate
 script:
-  - phpunit
+  - ./vendor/bin/phpunit --colors
   - ./vendor/bin/behat
