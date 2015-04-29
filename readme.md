@@ -1,6 +1,7 @@
 ## Diceware
 
 [![Build Status](https://travis-ci.org/tecnom1k3/diceware.svg?branch=features%2Fdevelop)](https://travis-ci.org/tecnom1k3/diceware)
+[![Coverage Status](https://coveralls.io/repos/tecnom1k3/diceware/badge.svg)](https://coveralls.io/r/tecnom1k3/diceware)
 
 #Install
 - Create an `.env` file in root directory, use `.env.example` as a boilerplate.  in the file make sure you have the key `DB_CONNECTION=sqlite` and `DB_DATABASE=storage/app/database.sqlite`.
