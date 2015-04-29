@@ -11,7 +11,11 @@ before_script:
   - sh ./build/ci/createSqliteFile.sh
   - chmod +x ./vendor/bin/behat
   - chmod +x ./vendor/bin/phpunit
+  - chmod +x ./vendor/bin/coveralls
   - php artisan migrate
+  - mkdir -p build/logs
 script:
-  - ./vendor/bin/phpunit --colors
+  - ./vendor/bin/phpunit
   - ./vendor/bin/behat
+after_script:
+ - ./vendor/bin/coveralls -v
