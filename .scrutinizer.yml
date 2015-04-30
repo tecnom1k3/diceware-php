@@ -2,4 +2,3 @@ filter:
     paths:
         - app/Console/Commands/*
         - src/*
-        - lib/*
