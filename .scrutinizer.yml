@@ -1,0 +1,4 @@
+filter:
+    paths:
+        - app/Console/Commands/*
+        - src/*
