@@ -14,7 +14,7 @@ class Diceware
      * File system factory
      * 
      * @var Factory
-    */
+     */
     protected $fsFactory;
     
     /**
@@ -52,7 +52,7 @@ class Diceware
      * Create a new command instance.
      * 
      * @codeCoverageIgnore
-    */
+     */
     public function __construct(Factory $fsFactory, Client $guzzleClient)
     {
         $this->setFsFactory($fsFactory);
@@ -65,7 +65,7 @@ class Diceware
      * @param Factory $factory
      * 
      * @codeCoverageIgnore
-    */
+     */
     public function setFsFactory(Factory $factory)
     {
         $this->fsFactory = $factory;
@@ -77,7 +77,7 @@ class Diceware
      * @return Factory
      * 
      * @codeCoverageIgnore
-    */
+     */
     public function getFsFactory()
     {
         return $this->fsFactory;
