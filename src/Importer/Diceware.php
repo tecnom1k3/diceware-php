@@ -50,8 +50,6 @@ class Diceware
     
     /**
      * Create a new command instance.
-     *
-     * @return void
      * 
      * @codeCoverageIgnore
     */
