@@ -1,17 +1,12 @@
-## Lumen PHP Framework
+## Diceware
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/downloads.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![Build Status](https://travis-ci.org/tecnom1k3/diceware.svg?branch=features%2Fdevelop)](https://travis-ci.org/tecnom1k3/diceware)
+[![Coverage Status](https://coveralls.io/repos/tecnom1k3/diceware/badge.svg)](https://coveralls.io/r/tecnom1k3/diceware)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tecnom1k3/diceware/badges/quality-score.png?b=features%2Fdevelop)](https://scrutinizer-ci.com/g/tecnom1k3/diceware/?branch=features%2Fdevelop)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
-
-### License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+#Install
+- Create an `.env` file in root directory, use `.env.example` as a boilerplate.  in the file make sure you have the key `DB_CONNECTION=sqlite` and `DB_DATABASE=storage/app/database.sqlite`.
+- Create a `database.sqlite`, you can copy/rename the file `storage/app/database.sqlite.dist` which already has the laravel migrations table installed.
+- Run `composer install` to install dependencies
+- If you did not copied/renamed the `storage/app/database.sqlite.dist` file and created an empty `storage/app/database.sqlite` file by your own, please run `php artisan migrate:install` to install the migration table
+- Run `php artisan migrate` to create the persistence infraestructure

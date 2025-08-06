@@ -3,5 +3,22 @@ php:
   - 5.4
   - 5.5
   - 5.6
-install: composer install --dev
-script: phpunit
+install:
+  - composer self-update
+  - composer install
+before_script:
+  - sh ./build/ci/createEnvFile.sh
+  - sh ./build/ci/createSqliteFile.sh
+  - chmod +x ./vendor/bin/behat
+  - chmod +x ./vendor/bin/phpunit
+  - chmod +x ./vendor/bin/coveralls
+  - php artisan migrate
+  - mkdir -p build/logs
+script:
+  - ./vendor/bin/phpunit
+  - ./vendor/bin/behat
+after_script:
+ - ./vendor/bin/coveralls -v
+ - wget https://scrutinizer-ci.com/ocular.phar
+ - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
+ 
