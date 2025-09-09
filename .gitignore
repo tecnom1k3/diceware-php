@@ -3,7 +3,6 @@
 .env.php
 .c9/
 vendor/
-composer.lock
 .env
 php.ini
 build/
