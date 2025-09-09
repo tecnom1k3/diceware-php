@@ -11,8 +11,7 @@
         "behat/behat": "~3.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0",
-        "satooshi/php-coveralls": "dev-master"
+        "phpunit/phpunit": "~4.0"
     },
     "autoload": {
         "psr-4": {
@@ -27,6 +26,9 @@
         ]
     },
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
     }
 }
